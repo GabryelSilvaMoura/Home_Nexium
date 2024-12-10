@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="PT-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="/css/style.css">
+
+    <!-- JS -->
+    <script src="js/script.js" defer></script>
+
+    <!-- Google Fonts: -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Raleway:wght@400;700&display=swap" rel="stylesheet">
+
+    <title>Home</title>
+</head>
+
+<style>
+    :root {
+    --cor-primaria: #00ccff;
+    --cor-secundaria: #ff6600;
+    --cor-fundo: #1a1a1d; 
+    --cor-destaque: #ff00ff; 
+    --cor-texto: #ffffff; 
+    --cor-hover: rgba(255, 255, 255, 0.3); 
+    --cor-borda: #ffcc00; 
+    --gradiente-fundo: linear-gradient(135deg, #1a1a1d, #222831);
+}
+
+    *{
+        margin: 0px;
+        padding: 0px;
+    }
+
+    body{
+        font-family: 'Press Start 2P', cursive;
+        background: var(--gradiente-fundo);
+        color: var(--cor-texto);
+        height: 100%;
+        width: 100%;
+    }
+
+
+    /* Cabecalho */
+    header {
+        width: 100%;
+        background: var(--cor-fundo);
+        padding: 20px 0;
+        box-shadow: 0px 4px 10px var(--cor-primaria);
+        border-bottom: 3px solid var(--cor-borda);
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+    }
+
+    header .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 20px;
+    }
+
+    header .logo {
+        font-size: 1.5rem;
+        color: var(--cor-primaria);
+        text-shadow: 0px 2px 5px var(--cor-destaque);
+        transition: 0.3s ease-in-out;
+    }
+
+    header .logo:hover {
+        transform: scale(1.1) rotate(-5deg);
+    }
+
+    header nav ul {
+        list-style: none;
+        display: flex;
+        margin: 0;
+        padding: 0;
+    }
+
+    header nav ul li {
+        margin: 0 15px;
+        position: relative;
+    }
+
+    header nav ul li a {
+        text-decoration: none;
+        color: var(--cor-texto);
+        text-transform: uppercase;
+        transition: 0.3s ease;
+    }
+
+    header nav ul li a:hover {
+        color: var(--cor-secundaria);
+        transform: scale(1.1);
+    }
+
+    header nav ul li a::after {
+        content: '';
+        display: block;
+        width: 0;
+        height: 2px;
+        background: var(--cor-secundaria);
+        transition: width 0.3s ease-in-out;
+        margin: auto;
+    }
+
+    header nav ul li a:hover::after {
+        width: 100%;
+    }
+
+
+    /* Rodapé */
+    footer {
+        background-color: #121212;
+        color: #f4f4f4;
+        padding: 30px;
+        font-family: 'Press Start 2P', cursive; 
+    }
+
+    .footer-content {
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        margin-bottom: 20px;
+        text-align: center;
+    }
+
+    .footer-section {
+        max-width: 200px;
+        margin: 15px;
+    }
+
+    .footer-section h2 {
+        font-size: 16px;
+        color: #ffbf00; 
+        margin-bottom: 10px;
+    }
+
+    .footer-section h2 span {
+        font-size: 20px;
+        margin-right: 5px;
+    }
+
+    .footer-section a {
+        text-decoration: none;
+        color: #ffbf00;
+        transition: color 0.3s;
+    }
+
+    .footer-section a:hover {
+        color: #00ffff; 
+    }
+
+    .footer-section p {
+        font-size: 12px;
+        color: #cccccc;
+    }
+
+    .footer-bottom {
+        text-align: center;
+        border-top: 2px solid #444;
+        padding-top: 15px;
+        font-size: 12px;
+        color: #888;
+    }
+
+    .footer-bottom strong {
+        color: #ffbf00;
+    }
+
+    footer:hover {
+        background-color: #1a1a1a;
+    }
+</style>
+
+<body>
+    <!-- Cabecalho -->
+    <header id="header">
+        <div class="container">
+            <div class="logo">Nexium</div>
+            <nav>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#sobre">Quem Somos</a></li>
+                    <li><a href="#jogos">Jogos</a></li>
+                    <li><a href="#contato">Contatos</a></li>
+                    <li><a href="#contato">Eventos</a></li>
+                    <li><a href="#contato">Minha Lista</a></li>
+                </ul>
+            </nav>
+            <div class="menu-mobile">☰</div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Banner 1 -->
+        <section id="ban1">
+            <div class="txt"> 
+                <h3>Nexium</h3>
+                <p>A Nexium é uma empresa focada na reimaginação de grandes livros e séries ou até mesmo filmes, criando para eles uma nova linha transformando-os em jogos. Já realizamos a transformação de grandes franquias em séries gamificadas.</p>
+            </div>
+        </section>
+
+        <!-- Sessão Jogos -->
+        <section id="jog">
+            <div>
+                <h2>Jogos</h2>
+                <a href=""><h3>Ver Mais</h3></a>
+            </div>
+            
+            <article>
+                <div class="itens">
+                    <img src="img/Apocalipse_da_promessa.jpeg" alt="">
+                
+                    <div class="desc">
+                        <h4>Apocalipse</h4>
+                        <p>
+                            Inspirada na Web Novel Brasileira. Este joga repleto de terror, mortes e MAGIA, irá lhe surpreender.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="itens">
+                    <img src="img/Gravity.png" alt="">
+                    
+                    <div class="desc">
+                        <h4>Gravity Falls</h4>
+                        <p>
+                            Este jogo feito apartir da série de mesmo nome. Nele você poderá se aventurar em novos mistérios solucionando-os e adentrando ainda mais em Gravity Falls.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="itens">
+                    <img src="img/Os_cem.jpg" alt="">
+                
+                    <div class="desc">
+                        <h4>The 100</h4>
+                        <p>Baseado na série "The 100" você poderá experiênciar vários momentos inpactantes e emociantes com os personagens da série.</p>
+                    </div>
+                </div>
+            </article>
+        </section>
+
+        <!-- Sessão Carrossel Automático -->
+        <section class="slider">
+            <div class="slideConteudo">
+                <input type="radio" name="btn-radio" id="radio1" checked="">
+                <input type="radio" name="btn-radio" id="radio2">
+                <input type="radio" name="btn-radio" id="radio3">
+    
+                <div class="slide-box primeiro">
+                    <img src="img/banner IseKai do Heroi.png" alt="slide 1">
+                </div>
+    
+                <div class="slide-box segundo">
+                    <img src="img/itacoisa_banner.png" alt="slide 2">
+                </div>
+
+                <div class="slide-box terceira">
+                    <img src="img/matrix_banner.png" alt="slide 3">
+                </div>
+    
+                <div class="nav-auto">
+                    <div class="auto-btn1"></div>
+                    <div class="auto-btn2"></div>
+                    <div class="auto-btn3"></div>
+                </div>
+    
+                <div class="nav-manual">
+                    <label for="radio1" class="manual-btn"></label>
+                    <label for="radio2" class="manual-btn"></label>
+                    <label for="radio3" class="manual-btn"></label>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sessão Eventos -->
+        <section id="eve">
+            <h2>Eventos</h2>
+
+            <article>
+                <img src="img/avatar.webp" alt="">
+
+                <div>
+                    <h3>Torneio de Natal</h3>
+                    <p>Com a chegada do mês de Dezembro, com ele vem grandes novidades! <br> Uma delas é o primeiro torneio de natal focado em um dos vários jogos multiplayers que a Nexium criou com o decorrer do ano de 2024, ele será selecionado aleatoriamente e apenas 10 competidores poderão participar do evento. <br> Por isso, economizem a sua sorte do ano para o dia 24 onde serão selecionados os participantes.</p>
+
+                    <button><a href="">Ver mais</a></button>
+                </div>
+            </article>
+        </section>
+
+        <!-- Sessão Sobre -->
+        <section id="sob">
+            <div>
+                <h2>Narnia</h2>
+                <p>Um jogo inspirado no livro que é a coletânea de vários contos surreais e surpreendentes. Neste nosso novo game você poderá se aventurar em cada uma dessas magníficas histórias podendo conhecer os seus universos e personagens.</p>
+            </div>
+
+            <img src="img/Narnia.jpg" alt="">
+        </section>
+
+        <!-- Sessão Contatos -->
+        <section id="con">
+            <div>
+                <a href="#" class="ba">Contatos</a>
+                <a href="#">Minha Lista</a>
+            </div>
+        </section>
+    </main>
+    
+
+    <!-- Rodapé -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h2><a href="#"><span>🎮</span> Sobre</a></h2>
+                <p>Conheça nossa história e conquistas!</p>
+            </div>
+            <div class="footer-section">
+                <h2><a href="#"><span>🕹️</span> Jogos</a></h2>
+                <p>Explore nossa coleção épica de games!</p>
+            </div>
+            <div class="footer-section">
+                <h2><a href="#"><span>📞</span> Contatos</a></h2>
+                <p>Entre em contato ou nos siga nas redes.</p>
+            </div>
+            <div class="footer-section">
+                <h2><a href="#"><span>📅</span> Eventos</a></h2>
+                <p>Participe de torneios e eventos emocionantes!</p>
+            </div>
+            <div class="footer-section">
+                <h2><a href="#"><span>📜</span> Lista</a></h2>
+                <p>Descubra tudo o que temos para oferecer.</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 | Powered by <strong>Gabryel da Silva Moura</strong></p>
+        </div>
+    </footer>
+</body>
+</html>

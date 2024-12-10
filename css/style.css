@@ -1,0 +1,344 @@
+main{
+    height: auto;
+    width: 100%;
+    background-color: white;
+}
+
+/* Sessão Banner 1 */
+main > #ban1{
+    height: 500px;
+    width: 100%;
+    background-position: center;
+    background-color: gray;
+    background-image: url("/img/arvore.jpg");
+    display: flex;
+    align-items: center;
+}
+
+main > #ban1 > .txt{
+    width: 40rem;
+    margin: 15px auto;
+    background-color: rgba(0, 0, 0, 0.664);
+    padding: 30px;
+}
+
+main > #ban1 > .txt > h3{
+    text-align: center;
+    border-bottom: 2px solid white;
+    margin-bottom: 15px;
+    padding: 10px 0px;
+}
+
+main > #ban1 > .txt > p{
+    text-align: justify;
+}
+
+/* Sessão Jogos */
+main > #jog{
+    padding: 50px 0px;
+    width: 100%;
+    height: auto;
+}
+
+main > #jog > div{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+main > #jog > div > h2{
+    color: black;
+}
+
+main > #jog > div > a{
+    color: black;
+    transition: 0.3s ease-in;
+}
+
+main > #jog > div > a:hover{
+    color: rgb(255, 0, 0);
+}
+
+main > #jog > article{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin: 25px 0px;
+}
+
+main > #jog > article > .itens{
+    width: 20rem;
+    height: 25rem;
+    position: relative;
+}
+
+main > #jog > article > .itens > img{
+    width: 20rem;
+    height: 25rem;
+    object-fit: cover;
+    transition: filter 0.5s ease-in;
+}
+
+main > #jog > article > .itens > .desc{
+    position: absolute;
+    bottom: 20%;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+main > #jog > article > .itens > .desc > h4{
+    text-align: center;
+    font-size: 1.1em;
+    line-height: 30px;
+}
+
+main > #jog > article > .itens > .desc > p{
+    text-align: center;
+    font-size: 0.9em;
+}
+
+main > #jog > article > .itens > img:hover{
+    filter: brightness(50%);
+}
+
+main > #jog > article > .itens:hover .desc{
+   opacity: 1;
+}
+
+/* Sessão Carrossel Automatico */
+section.slider{
+	margin: 30px auto;
+	width: 100%;
+	height: 250px;
+	padding: 0px !important;
+	overflow: hidden;
+}
+
+.slideConteudo{
+	width: 400%;
+	height: 250px;
+	display: flex;
+	object-fit: cover;
+}
+
+.slideConteudo input{
+	display: none;
+}
+
+.slide-box{
+	width: 25%;
+	height: auto;
+	position: relative;
+	text-align: center;
+	transition: 1s;
+}
+
+.slide-box img{
+	width: 100%;
+	height: 250px;
+	object-fit: cover;
+}
+
+.nav-manual, .nav-auto{
+	position: absolute;
+	width: 100%;
+	margin-top: 30%;
+	display: flex;
+	justify-content: center;
+	display: none;
+	transition: 0.2s;
+}
+
+.nav-manual .manual-btn, .nav-auto div{
+	padding: 2px 20px;
+	margin-right: 10px;
+	border-radius: 10px 10px 10px 10px;
+	cursor: pointer;
+	background-color: white;
+}
+
+.nav-manual .manual-btn:hover{
+	border-color: rgb(181, 181, 181);
+	background-color: rgb(181, 181, 181);
+}
+
+#radio1:checked ~ .nav-auto .auto-btn1{
+	background-color: rgb(0, 145, 255);
+	z-index: 3;
+}
+
+#radio2:checked ~ .nav-auto .auto-btn2{
+	background-color: rgb(0, 145, 255);
+	z-index: 3;
+}
+
+#radio3:checked ~ .nav-auto .auto-btn3{
+	background-color: rgb(0, 145, 255);
+	z-index: 3;
+}
+
+#radio1:checked ~ .primeiro{
+	margin-left: 0%;
+}
+
+#radio2:checked ~ .primeiro{
+	margin-left: -25%;
+}
+
+#radio3:checked ~ .primeiro{
+	margin-left: -50%;
+}
+
+.slide-box * {
+    user-select: none;
+    -ms-user-select: none;
+    -moz-user-select: none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    -webkit-touch-callout: none;
+}
+
+/* Sessão Eventos */
+main > #eve{
+    height: auto;
+    width: 100%;
+    padding: 50px 0px;
+    box-shadow: inset 2px 2px 9px black;
+}
+
+main > #eve > h2{
+    color: black;
+    margin: 10px auto;
+    padding-bottom: 15px;
+    text-align: center;
+    border-bottom: 2px solid black;
+    width: 350px;
+}
+
+main > #eve > article{
+    margin-top: 30px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+main > #eve > article > img{
+    height: 20rem;
+    width: 20rem;
+}
+
+main > #eve > article > div{
+    width: 30rem;
+    color: black;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    border: 2px dashed black;
+
+    border-radius: 20px 20px;
+    transition: 0.3s ease-in-out;
+    padding: 20px;
+}
+
+main > #eve > article > div:hover{
+    background-color: rgba(172, 172, 172, 0.548);
+}
+
+main > #eve > article > div > h3{
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+main > #eve > article > div > p{
+    text-align: justify;
+}
+
+main > #eve > article > div > button{
+    background-color: gray;
+    margin: 20px 0;
+    padding: 20px 35px;
+    border-radius: 40px 40px;
+    border: none;
+    transition: 0.3s ease-in;
+}
+
+main > #eve > article > div > button:hover{
+    background-color: gold;
+}
+
+main > #eve > article > div > button > a{
+    text-decoration: none;
+    color: white;
+    font-size: 1.4em;
+    font-weight: 400;
+}
+
+/* Sessão Sobre */
+main > #sob{
+    height: auto;
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 50px 0px;
+    background-color: rgba(128, 128, 128, 0.74);
+}
+
+main > #sob > img{
+    width: 30rem;
+    height: 20rem;
+}
+
+main > #sob > div{
+    width: 35rem;
+    color: black;
+}
+
+main > #sob > div > h2{
+    text-align: center;
+    line-height: 45px;
+    color: gold;
+    margin: 20px;
+    border-bottom: 2px solid gold;
+}
+
+main > #sob > div > p{
+    color: white;
+}
+
+/* Sessão Contatos */
+main > #con{
+    width: 100%;
+    padding: 25px 0px;
+    height: auto;
+    background-color: rgba(128, 128, 128, 0.74);
+}
+
+main > #con > div{
+    background-color: rgb(4, 182, 4);
+    width: 40rem;
+    padding: 20px 0px;
+    text-align: center;
+    margin: 0 auto;
+    border-radius: 40px 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+main > #con > div > a{
+    color: white;
+    font-size: 1.3em;
+    text-decoration: none;
+    padding: 5px 40px;
+}
+
+main > #con > div > a:hover{
+    background-color: rgb(9, 235, 9);
+}
+
+main > #con > div > .ba{
+    border-right: 3px solid white;
+}
