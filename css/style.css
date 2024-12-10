@@ -10,7 +10,7 @@ main > #ban1{
     width: 100%;
     background-position: center;
     background-color: gray;
-    background-image: url("img/arvore.jpg");
+    background-image: url("../img/arvore.jpg");
     display: flex;
     align-items: center;
 }
